@@ -1,0 +1,37 @@
+{% extends "layout.html" %}
+
+{% block body%}
+  <div class="grid">
+    <div id="featured">
+      <img src="{{ url_for('static',filename='images/500x500.png') }}">
+      <h2>New Stuff Out Now Currently!</h2>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat tempus neque in vestibulum.
+        Maecenas et vehicula nisl. Donec quis massa quis nibh fermentum ullamcorper a a lorem.
+        Vivamus lacus leo, imperdiet euismod mauris eget, dignissim pulvinar erat.
+        In quam lorem, feugiat sed accumsan a, imperdiet sit amet neque.
+        Aliquam laoreet urna ut vehicula bibendum.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      </p>
+    </div>
+
+
+    <div id="sidecontent">
+      <h3 class="primarysidecontent">Important Stuff!</h3>
+      <img src="{{ url_for('static',filename='images/250x250.png') }}" class="primarysidecontent">
+      <p class="primarysidecontent">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Fusce feugiat tempus neque in vestibulum.
+        Maecenas et vehicula nisl. Donec quis massa quis nibh fermentum ullamcorper a a lorem.
+      </p>
+
+      <h3 class="secondarysidecontent">More News!</h3>
+      <img src="{{ url_for('static',filename='images/250x250.png') }}" class="secondarysidecontent">
+      <p class="secondarysidecontent">
+        In quam lorem, feugiat sed accumsan a, imperdiet sit amet neque.
+        Aliquam laoreet urna ut vehicula bibendum.
+        Interdum et malesuada fames ac ante ipsum primis in faucibus.
+      </p>
+    </div>
+
+  </div>
+{% endblock %}

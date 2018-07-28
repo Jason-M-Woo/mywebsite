@@ -1,14 +1,4 @@
 
-@font-face {
-  font-family: Roboto;
-  src: url(fonts/Roboto-Regular.ttf);
-}
-
-@font-face {
-  font-family: Roboto-Light;
-  src: url(fonts/Roboto-Light.ttf)
-}
-
 @media (min-width: 1500px) {
   #navbar {
     width: 85%;

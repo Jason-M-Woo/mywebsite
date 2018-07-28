@@ -1,0 +1,60 @@
+<!--logo from https://logomakr.com/2ngrOM# -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/responsive.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/media.css') }}">
+
+    <link rel="icon" href="{{url_for('static', filename='logowhite.png')}}">
+    <title>Welcome</title>
+
+    <script>
+      function animateHamburger(x) {
+        x.classList.toggle("change");
+      }
+    </script>
+
+  </head>
+
+  <body>
+
+    <div id="navbar">
+        <div id="spacebar">
+        </div>
+
+        <img id="logo" src="{{url_for('static', filename='logoblack.png')}}" alt="Logo/Icon Here">
+        <h1>Noobology</h1>
+
+        <div class="navbuttoncontainer">
+          <button style="font-family: Roboto;">Home</button>
+          <button style="font-family: Roboto;">About</button>
+          <button style="font-family: Roboto;">Projects</button>
+          <div class="dropdown">
+            <button class="dropbtn" style="font-family: Roboto;">More</button>
+            <div class="dropdown-content">
+              <a href="#" style="font-family: Roboto;">Contact Me</a>
+              <a href="#" style="font-family: Roboto;">Downloads</a>
+            </div>
+          </div>
+
+
+          <div id="hamburger_icon" onclick="animateHamburger(this)">
+            <div class="hamburger1"></div>
+            <div class="hamburger2"></div>
+            <div class="hamburger3"></div>
+          </div>
+
+        </div>
+    </div>
+
+    {% block body %}
+    {% endblock %}
+
+
+  </body>
+</html>
