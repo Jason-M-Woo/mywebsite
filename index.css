@@ -1,0 +1,144 @@
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
+#navbar {
+  background-color: black;
+  margin-top: 0px;
+  padding-bottom: .2em;
+  padding-top: .2em;
+}
+
+
+#logo {
+  left: 1em;
+  position: relative;
+  top: 3px;
+  width: auto;
+  height: 2em;
+}
+
+#navbar > h1 {
+  margin: 0px;
+  position: relative;
+  display: inline-block;
+  padding: 0px;
+  left: 1em;
+  color: #eee;
+  bottom: 4px;
+  font-family: Roboto;
+  font-size: 1.5em;
+  z-index: 1;
+}
+
+#navbar > img {
+  color: white;
+  margin-left: 10px;
+}
+
+#navbar > div {
+  float: right;
+}
+
+#spacebar {
+  background-color: #cccccc;
+  height: 4px;
+  position: relative;
+  bottom: 4px;
+  width: 100%;
+  z-index: 2;
+}
+
+.navbuttoncontainer {
+  margin-right: 1em;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.navbuttoncontainer button {
+  height: 40px;
+  padding-left: 10px;
+  padding-right: 10px;
+  position: relative;
+  background-color: black;
+  font-family: Roboto-Light;
+  border: none;
+  bottom: 1px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  z-index: 1;
+  -webkit-transition: color: 0.4s;
+  -moz-transition: color: 0.4s;
+  transition: color 0.4s;
+  cursor: pointer;
+}
+
+.navbuttoncontainer button:hover {
+  color: #999;
+  border-bottom: 4px solid #ccc;
+}
+
+.grid {
+  margin-top: 15px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 1em;
+  position: absolute;
+}
+
+#featured {
+  padding-right: 10px;
+  border-radius: 5px;
+  text-align: left;
+  overflow: hidden;
+  border-right: 2px solid #ddd;
+}
+
+#featured > h2 {
+  font-family: Roboto;
+}
+
+#featured > p {
+  font-family: Roboto;
+}
+
+#sidecontent {
+  grid-column: 8/10;
+  font-family: Roboto;
+  border-left: 2px solid #ddd;
+  padding-left: 20px;
+}
+
+.hamburger1, .hamburger2, .hamburger3 {
+  width: 30px;;
+  height: 3px;
+  background-color: white;
+  margin: 6px 0;
+  position: relative;
+  bottom: 13px;
+  transition: 0.4s;
+  border-radius: 3px;
+}
+
+.navbuttoncontainer {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.change .hamburger1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 4px);
+  transform: rotate(-45deg) translate(-5px, 4px);
+}
+
+.change .hamburger2 {
+  opacity: 0;
+}
+
+.change .hamburger3 {
+  -webkit-transform: rotate(45deg) translate(-8px, -8px);
+  transform: rotate(45deg) translate(-8px, -8px);
+}

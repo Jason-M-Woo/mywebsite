@@ -1,0 +1,105 @@
+
+@font-face {
+  font-family: Roboto;
+  src: url(fonts/Roboto-Regular.ttf);
+}
+
+@font-face {
+  font-family: Roboto-Light;
+  src: url(fonts/Roboto-Light.ttf)
+}
+
+@media (min-width: 1500px) {
+  #navbar {
+    width: 85%;
+    border-bottom-left-radius: 4px;
+    border-bottom-right-radius: 4px;
+    margin: auto;
+  }
+
+  #featured {
+    grid-column: 4/8;
+  }
+
+  #featured > img {
+    height: 25em;
+    width: auto;
+  }
+  .hamburger1, .hamburger2, .hamburger3 {
+    display: none;
+  }
+}
+
+@media (max-width: 1500px) {
+  #navbar {
+    width: 100%
+  }
+
+  #featured > img {
+    height: 20em;
+    width: auto;
+  }
+  .hamburger1, .hamburger2, .hamburger3 {
+    display: none;
+  }
+
+  #featured {
+    grid-column: 4/8;
+  }
+}
+
+@media (max-width: 1430px) {
+  #featured {
+    grid-column: 3/8;
+  }
+  .hamburger1, .hamburger2, .hamburger3 {
+    display: none;
+  }
+
+}
+
+@media (max-width: 1300px) {
+  #sidecontent {
+    grid-column: 8/11;
+  }
+  .hamburger1, .hamburger2, .hamburger3 {
+    display: none;
+  }
+}
+
+@media (max-width: 1050px) {
+  #featured {
+    grid-column: 2/8;
+  }
+  .hamburger1, .hamburger2, .hamburger3 {
+    display: none;
+  }
+
+}
+@media (max-width: 830px) {
+  .navbuttoncontainer button {
+    display: none;
+  }
+
+  .hamburger1, .hamburger2, .hamburger3 {
+    display: block;
+  }
+
+  #sidecontent {
+    grid-column: 4/10;
+  }
+
+  #featured {
+    grid-column: 4/10;
+  }
+}
+
+@media (max-width: 650px) {
+  #sidecontent {
+    grid-column: 2/12;
+  }
+
+  #featured {
+    grid-column: 2/12;
+  }
+}
