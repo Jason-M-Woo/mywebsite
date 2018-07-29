@@ -9,8 +9,9 @@
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/index.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/responsive.css') }}">
     <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/media.css') }}">
+    <link rel= "stylesheet" type= "text/css" href= "{{ url_for('static',filename='styles/register.css') }}">
 
-    <link rel="icon" href="{{url_for('static', filename='logowhite.png')}}">
+    <link rel="icon" href="{{url_for('static', filename='images/logowhite.png')}}">
     <title>Welcome</title>
 
     <script>
@@ -27,17 +28,18 @@
         <div id="spacebar">
         </div>
 
-        <img id="logo" src="{{url_for('static', filename='logoblack.png')}}" alt="Logo/Icon Here">
+        <a href="{{url_for('index')}}"><img id="logo" src="{{url_for('static', filename='images/logoblack.png')}}" alt="Logo/Icon Here"></a>
         <h1>Noobology</h1>
 
         <div class="navbuttoncontainer">
-          <button style="font-family: Roboto;">Home</button>
+          <a href="{{url_for('index')}}"><button style="font-family: Roboto;">Home</button></a>
           <button style="font-family: Roboto;">About</button>
           <button style="font-family: Roboto;">Projects</button>
+          <a href="{{url_for('register')}}"><button style="font-family: Roboto;">Register</button></a>
           <div class="dropdown">
             <button class="dropbtn" style="font-family: Roboto;">More</button>
             <div class="dropdown-content">
-              <a href="#" style="font-family: Roboto;">Contact Me</a>
+              <a href="{{url_for('contact')}}" style="font-family: Roboto;">Contact Me</a>
               <a href="#" style="font-family: Roboto;">Downloads</a>
             </div>
           </div>

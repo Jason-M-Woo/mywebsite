@@ -1,0 +1,51 @@
+@media (min-width: 1500px) {
+  #inputcontainer {
+    grid-column: 5/10;
+  }
+
+  #formcontainer {
+    margin-top: 100px;
+  }
+}
+
+@media (max-width: 1499px) {
+  #formcontainer {
+    margin-top: 50px;
+  }
+
+  #inputcontainer {
+    grid-column: 4/12;
+  }
+}
+
+@media (max-width: 650px) {
+  #formcontainer {
+    margin-top: 15px;
+  }
+
+  #inputcontainer {
+    grid-column: 2/12;
+  }
+}
+
+
+
+#formcontainer {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
+#formcontainer p {
+  font-family: Roboto;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+
+
+#inputcontainer {
+
+  border-left: 2px solid #ddd;
+  border-radius: 5px;
+  padding: 15px 15px 15px 30px;
+}

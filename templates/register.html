@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block body %}
+  <div id="formcontainer">
+    <div id="inputcontainer">
+      <h1 style="font-family: Roboto; margin-top: 0px;">Register</h1>
+      <form action="{{ url_for('registered') }}" method="post">
+        <p>Username</p>
+        <input type="text" placeholder="Username" name="username">
+        <p>Password</p>
+        <input type="password" placeholder="Password" name="password" style="margin-bottom: 5px;"><br>
+        <button>Submit</button>
+      </form>
+    </div>
+  </div>
+{% endblock %}

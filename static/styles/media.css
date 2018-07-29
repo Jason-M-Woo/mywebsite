@@ -11,6 +11,7 @@
     grid-column: 4/8;
   }
 
+
   #featured > img {
     height: 25em;
     width: auto;
@@ -85,6 +86,7 @@
 }
 
 @media (max-width: 650px) {
+
   #sidecontent {
     grid-column: 2/12;
   }
