@@ -16,6 +16,11 @@ def register():
 
 @app.route("/success", methods=["POST"])
 def registered():
-    username = request.form.get("username")
+    if request.form.get("username") == "" :
+        return render_template("register.html", usernamealert = "Please enter a valid username")
+    else:
+        username = request.form.get("username")
+        return render_template("registered.html", username=username)
+
+
     #password = request.form.get("password")
-    return render_template("registered.html", username=username)
