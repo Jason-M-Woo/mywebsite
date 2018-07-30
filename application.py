@@ -1,4 +1,11 @@
 from flask import Flask, render_template, request
+from applicationdb import checkUsernameUnique
+
+def returnInvalidInfo(message):
+    return render_template("register.html", usernamealert = message)
+
+def checkStringValid(stringToCheck):
+    return stringToCheck.isalnum()
 
 app = Flask(__name__)
 
@@ -16,11 +23,16 @@ def register():
 
 @app.route("/success", methods=["POST"])
 def registered():
-    if request.form.get("username") == "" :
-        return render_template("register.html", usernamealert = "Please enter a valid username")
+    nameToCheck = request.form.get("username")
+    passToCheck = request.form.get("password")
+    passToCheck2 = request.form.get("confirm_password")
+    if checkStringValid(nameToCheck) and checkStringValid(passToCheck) and (passToCheck == passToCheck2):
+        if checkUsernameUnique(nameToCheck):
+            return render_template("registered.html", username=nameToCheck)
+        else:
+            return returnInvalidInfo("Username already taken")
     else:
-        username = request.form.get("username")
-        return render_template("registered.html", username=username)
-
-
-    #password = request.form.get("password")
+        if passToCheck != passToCheck2:
+            return returnInvalidInfo("Passwords did not match")
+        else:
+            return returnInvalidInfo("Please enter an alphanumeric username/password")
