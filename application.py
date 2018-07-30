@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-from applicationdb import checkUsernameUnique
+from applicationdb import checkUsernameUnique, updateAccountDB
 
 def returnInvalidInfo(message):
     return render_template("register.html", usernamealert = message)
@@ -28,6 +28,7 @@ def registered():
     passToCheck2 = request.form.get("confirm_password")
     if checkStringValid(nameToCheck) and checkStringValid(passToCheck) and (passToCheck == passToCheck2):
         if checkUsernameUnique(nameToCheck):
+            updateAccountDB(nameToCheck, passToCheck)
             return render_template("registered.html", username=nameToCheck)
         else:
             return returnInvalidInfo("Username already taken")

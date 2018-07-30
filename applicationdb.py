@@ -12,3 +12,10 @@ def checkUsernameUnique(usernameToCheck):
     else:
         return False
     db.close()
+
+def updateAccountDB(username, password):
+    db = psycopg2.connect(database=DBNAME)
+    c = db.cursor()
+    c.execute("insert into users (username, password) values ('{}', '{}')".format(username, password))
+    db.commit()
+    db.close()
